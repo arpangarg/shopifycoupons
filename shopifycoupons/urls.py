@@ -17,7 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from coupons.views import display_main, submit
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 urlpatterns = [
     url(r'^$', display_main),
     url(r'^submit', submit)
 ]
+
+urlpatterns += staticfiles_urlpatterns()
